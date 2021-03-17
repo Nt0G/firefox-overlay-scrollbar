@@ -5,7 +5,7 @@
 <h1>Firefox Overlay Scrollbars</h1>
 
 
-[![](https://img.shields.io/badge/license-MIT-6c5eee?style=flat-square)](./LICENSE)
+[![](https://img.shields.io/badge/license-MIT-6c5eee?style=flat-square)](../LICENSE)
 </div>
 <h3> → <a href="https://github.com/spencerwooo/firefox-overlay-scrollbar">spencerwooo/firefox-overlay-scrollbar</a>
 <h5>↓ <a href="https://github.com/Aris-t2/CustomJSforFx">Aris-t2/CustomJSforFx</a>, <a href="https://github.com/endeavoursc/firefox-overlay-scrollbars-win10">endeavoursc/firefox-overlay-scrollbars-win10</a>.

@@ -1,53 +1,41 @@
 <div align="center">
 
-<img src="assets/firefox.svg" alt="Firefox Logo" width="120px"/>
+<img src="firefox.svg" alt="Firefox Logo" width="120px"/>
 
 <h1>Firefox Overlay Scrollbars</h1>
 
 
-![](https://img.shields.io/badge/Firefox-72+-ff7139?logo=Mozilla%20Firefox&style=flat-square)
 [![](https://img.shields.io/badge/license-MIT-6c5eee?style=flat-square)](./LICENSE)
 </div>
-<h4> → <a href="https://github.com/spencerwooo/firefox-overlay-scrollbar"></spencerwooo/firefox-overlay-scrollbar>
-<h6> 🎲 Derived from the all-in-one feature-complete Firefox user script repo <a href="https://github.com/Aris-t2/CustomJSforFx">Aris-t2/CustomJSforFx</a>, and the Windows 10 style scrollbar repo <a href="https://github.com/endeavoursc/firefox-overlay-scrollbars-win10">endeavoursc/firefox-overlay-scrollbars-win10</a>.<h6>
+<h3> → <a href="https://github.com/spencerwooo/firefox-overlay-scrollbar">spencerwooo/firefox-overlay-scrollbar</a>
+<h5>↓ <a href="https://github.com/Aris-t2/CustomJSforFx">Aris-t2/CustomJSforFx</a>, <a href="https://github.com/endeavoursc/firefox-overlay-scrollbars-win10">endeavoursc/firefox-overlay-scrollbars-win10</a>.
 
 ## Demo
 
 |               Style                |                             Preview                             |
 | :--------------------------------: | :-------------------------------------------------------------: |
-|     Windows 10 style scrollbar     |  <img src="assets/demo-win.gif" alt="demo-win" width="600px">   |
+|     Windows 10 style scrollbar     |  <img src="demo-win.gif" alt="demo-win" width="600px">   |
 
 ## Installation
 
 *Set `about:config » toolkit.legacyUserProfileCustomizations.stylesheets` to `true` for the following procedures.*
 
-To begin with, close all instances of Firefox, and **delete Firefox's old script/startup cache** at `about:profiles » Local Directory » Open Folder`
+Close all instances of Firefox and **delete Firefox's old script/startup cache** at `about:profiles » Local Directory » Open Folder`
 
 ![](https://i.loli.net/2020/01/26/wxiPjBKWothuGVf.png)
 
 Next, **download the entire repo** with either Git or `Download ZIP`. Uncompress the downloaded zip file.
 
-Then, find the folder `firefox` inside the downloaded repo directory, **copy the `defaults` folder and the file `config.js` to Firefox's installation directory**, i.e., where `firefox.exe` lives.
+Find the folder `firefox` inside the downloaded repo directory, **copy the `defaults` folder and the file `config.js` to Firefox's installation directory**, i.e., where `firefox.exe` lives.
 
 ![](https://i.loli.net/2020/01/26/bhz1VpZav4MCKlx.png)
 
-Finally:
-
-- Find Firefox's profile folder at `about:support » Profile Folder » Open Folder`, **create a folder called `chrome` inside**
+Find Firefox's profile folder at `about:support » Profile Folder » Open Folder`, **create a folder called `chrome` inside**
 
 ![](https://i.loli.net/2020/01/26/QwMtSFAVLbryepY.png)
 
-- Then, find the folder `profile` inside the downloaded repo directory, **copy the `userChrome` folder and the file `userChrome.js` to the folder `chrome` that we just created**
+Find the `profile` folder inside the downloaded repo directory, **copy the `userChrome` folder and the file `userChrome.js` to the `chrome` folder**
 
 ![](https://i.loli.net/2020/01/26/HESxRq9XmWFhBfC.png)
 
-
 *Delete Firefox's old script/startup cache at `about:profiles » Local Directory » Open Folder` every time you change the script under `chrome/userChrome` folder.*
-
----
-
-🦊 **Firefox Overlay Scrollbars** ©Spencer Woo. Released under the [MIT License](LICENSE).
-
-Authored and maintained by Spencer Woo.
-
-[@Portfolio](https://spencerwoo.com/) · [@Blog](https://blog.spencerwoo.com/) · [@GitHub](https://github.com/spencerwooo)

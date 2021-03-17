@@ -16,7 +16,7 @@ var UserChrome_js = {
         var ucFilePath = OS.Path.join(OS.Constants.Path.profileDir, "chrome", "userChrome.js");
         var ucFile = new FileUtils.File(ucFilePath);
         if (ucFile.exists() && ucFile.isFile()) {
-          this.utilFileURI = OS.Path.toFileURI(OS.Path.join(OS.Constants.Path.profileDir, "./chrome/userChrome/userChromeJSutilities.js"));
+          this.utilFileURI = OS.Path.toFileURI(OS.Path.join(OS.Constants.Path.profileDir, "./chrome/js/userChromeJSutilities.js"));
           this.ucFileURI = OS.Path.toFileURI(ucFilePath);
         };
         Services.obs.removeObserver(this, "final-ui-startup");

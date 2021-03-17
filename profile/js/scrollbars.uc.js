@@ -1,14 +1,3 @@
-// ==UserScript==
-// @name           userChrome.js
-// @namespace      castelo@live.com
-// @version        0.0.3
-// @note           Thanks to ardiman(https://github.com/Endor8/userChrome.js/blob/master/floatingscrollbar/FloatingScrollbar.uc.js)
-// @note           Thanks to Griever(https://github.com/Griever/userChromeJS/blob/master/SmartScrollbar.uc.js) and Paul Rouget(https://gist.github.com/4003205)
-// @note...........0.0.3 Added specific z-index behavior for some sites
-// @note           0.0.2 Increased width of scrollbar from 2px to 3px 
-// @note           0.0.1 Initial version
-// ==/UserScript==
-
 (function () {
     var prefs = Services.prefs,
         enabled;
@@ -33,51 +22,54 @@
         justify-content: flex-end;\
         pointer-events: auto;\
         width: auto!important;\
+		transition: background-color 0.1s cubic-bezier(.25,.1,0,1), padding 0.1s cubic-bezier(.25,.1,0,1);\
     }\
     :not(select):not(hbox) > scrollbar[orient = "vertical"] {\
         -moz-margin-start: -16px;\
         width: 16px!important;\
     }\
     :not(select):not(hbox) > scrollbar[orient = "vertical"] thumb {\
-        border-left: 3px solid rgba(80, 80, 80, 0.65);\
         min-height: 16px;\
-        transform: translate(9px, 0px);\
-        transition: transform 0.1s linear;\
+        transform: scaleX(0.25);\
+		transform-origin: right;\
+        transition: transform 0.1s cubic-bezier(.25,.1,0,1);\
     }\
    :not(select):not(hbox) > scrollbar[orient = "horizontal"] {\
         margin-top: -16px;\
         height: 16px!important;\
     }\
     :not(select):not(hbox) > scrollbar[orient = "horizontal"] thumb {\
-        border-top: 3px solid rgba(80, 80, 80, 0.65);\
         min-width: 16px;\
-        transform: translate(0px, 9px);\
-        transition: transform 0.1s linear;\
+        transform: scaleY(0.25);\
+		transform-origin: bottom;\
+        transition: transform 0.1s cubic-bezier(.25,.1,0,1);\
     }\
     :not(select):not(hbox) > scrollbar thumb {\
         -moz-appearance: none!important;\
-        border-radius: 0px!important;\
-        background-color: rgba(100, 100, 100, 0)!important;\
+        background-color: rgba(100, 100, 100, 0.8)!important;\
         pointer-events: auto;\
+		transition: background-color 0.1s cubic-bezier(.25,.1,0,1);\
     }\
     :not(select):not(hbox) > scrollbar:hover {\
-        background-color: rgba(90, 90, 90, 0.15);\
-	padding: 0;\
+        background-color: rgba(100, 100, 100, 0.2);\
+		padding: 0;\
+		transition: background-color 0.1s cubic-bezier(.25,.1,0,1), padding 0.1s cubic-bezier(.25,.1,0,1);\
     }\
     :not(select):not(hbox) > scrollbar:hover thumb {\
-        background-color: rgba(100, 100, 100, 0.8)!important;\
-        border-left: 0px;\
-        border-top: 0px;\
-        transform: translate(0px, 0px);\
-        transition: transform 0.1s linear;\
+        background-color: rgba(100, 100, 100, 1)!important;\
+        transform: scale(1, 1);\
+        transition: transform 0.1s cubic-bezier(.25,.1,0,1);\
     }\
     :not(select):not(hbox) > scrollbar thumb:hover {\
-        background-color: rgba(100, 100, 100, 0.8)!important;\
+        background-color: rgba(110, 110, 110, 1)!important;\
+		transition: background-color 0.1s cubic-bezier(.25,.1,0,1);\
     }\
     :not(select):not(hbox) > scrollbar thumb:active {\
-        background-color: rgba(110, 110, 110, 1)!important;\
+        background-color: rgba(150, 150, 150, 1)!important;\
+		transition: background-color 0.1s cubic-bezier(.25,.1,0,1);\
     }\
     :not(select):not(hbox) > scrollbar scrollbarbutton, :not(select):not(hbox) > scrollbar gripper {\
+        -moz-appearance: none!important;\
         display: none;\
     }\
     @-moz-document url-prefix("https://mail.google.com/"), url-prefix("https://docs.google.com/"), url-prefix("https://calendar.google.com/") {\
